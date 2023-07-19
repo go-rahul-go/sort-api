@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background:linear-gradient(to right,rgb(239, 239, 254),rgb(252, 255, 103));
+        }
+        table{
+            width:90%;
+            margin:auto;
+            font-size:1.3em;
+            text-align:center;
+        }
+        thead{
+            font-weight:bolder;
+        }
+        table,td{
+            border-collapse: collapse;
+            border:2px solid black;
+        }
+    </style>
+    <title>List of Mobiles</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Brand</td>
+                <td>Name</td>
+                <td>Price</td>
+                <td>OS</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0;i<result.length;i++) {%>
+                <tr>
+                    <td>
+                        <%= result[i].brand %>
+                    </td>
+                    <td>
+                        <%= result[i].name %>
+                    </td>
+                    <td>
+                        <%= result[i].price %>
+                    </td>
+                    <td>
+                        <%= result[i].os %>
+                    </td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</body>
+
+</html>
